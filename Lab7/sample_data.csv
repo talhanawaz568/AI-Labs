@@ -1,0 +1,15 @@
+import pandas as pd
+import numpy as np
+
+# Create a dictionary with sample data
+data = {
+    'name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank'],
+    'age': [25, np.nan, 30, 35, np.nan, 40], # Missing values
+    'salary': [50000, 54000, np.nan, 58000, 60000, 62000], # Missing values
+    'experience_years': [2, 5, 8, 1, 10, 15], # For normalization
+    'department': ['IT', 'HR', 'IT', 'Sales', 'HR', 'Sales'] # For encoding
+}
+
+df = pd.DataFrame(data)
+df.to_csv('sample_data.csv', index=False)
+print("✓ sample_data.csv created successfully.")
